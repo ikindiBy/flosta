@@ -1,0 +1,26 @@
+.navigation {
+    width: 100%;
+    
+    font-size: 1.25rem;
+}
+
+.nav-list {
+    padding: 16px 16px 16px 160px;
+    display: flex;
+    justify-content:flex-start;
+    list-style-type:none;
+  }
+  
+  .nav-list li a {
+    margin-right: 24px;
+  }
+  
+  .active, a:focus {
+    color: greenyellow;
+  }
+  
+  a, a:link a:hover {
+    color: wheat;
+    text-decoration:none; 
+    cursor: pointer;
+  }
