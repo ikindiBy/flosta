@@ -19,7 +19,7 @@ const DetailPage = (props) => {
             <h2>{product.title}</h2>
             <div className="detail-page__image-container">
                 <img
-                    src={product.imageSrc}
+                    src={`.${product.imageSrc}`}
                     alt="Image of DetailPage + descrition"
                 />
             </div>
