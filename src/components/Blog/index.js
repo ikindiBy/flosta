@@ -14,7 +14,7 @@ const Blog = () => {
                 <ArticleItem
                 key={article.articleId}
                 id={article.articleId}
-                imageSrc={article.imageSrc}
+                imageSrc={`${process.env.PUBLIC_URL}${article.imageSrc}`}
                 title={article.title}
                 description={article.description}
                 />

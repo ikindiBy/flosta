@@ -19,7 +19,7 @@ const ArticlePage = (props) => {
             <h2>{article.title}</h2>
             <div className="article-page__image-container">
                 <img
-                    src={article.imageSrc}
+                    src={`${process.env.PUBLIC_URL}${article.imageSrc}`}
                     alt="Image of articlePage + descrition"
                 />
             </div>

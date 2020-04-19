@@ -17,7 +17,6 @@ const ProductTile = ({
     onRemoveFromBasketClick,
 }) => {
     const changeBasketState = () => {
-        console.log('_____ changeBasketState __________', inBasket, id);
         inBasket ? onRemoveFromBasketClick(id) : onAddToBAsketClick(id);
     };
 

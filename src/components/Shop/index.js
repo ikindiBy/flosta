@@ -34,7 +34,7 @@ const _Shop = ({products, addToBasket, removeFromBasket}) => {
                 {products.map(product => 
                     <ProductTile
                         key={product.productId}
-                        imageSrc={product.imageSrc}
+                        imageSrc={`${process.env.PUBLIC_URL}${product.imageSrc}`}
                         title={product.title}
                         price={product.price}
                         type={product.type}

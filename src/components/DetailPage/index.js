@@ -1,27 +1,51 @@
 import React from 'react';
-import { products } from '../../constants/data';
+import { connect } from 'react-redux';
+
+import { addToBasketAction, removeFromBasketAction } from '../../actions';
+
+import Button from '../Button';
 
 import './DetailPage.css';  
 
-const DetailPage = (props) => {
+const _DetailPage = (props) => {
     const {
         match: {
             params,
-        }
+        },
+        addToBasket,
+        removeFromBasket,
+        products,
     } = props;
 
     const product = products.find(product => product.productId === parseInt(params.id, 10));
 
-    console.log('____________>>', +params.id, products);
+    const { inBasket } = product;
+
+    console.log('____________>>', +params.id, product);
+
+    const changeBasketState = () => {
+        console.log('_______ --- _____>>', params.id);
+        inBasket ? removeFromBasket(+params.id) : addToBasket(+params.id)
+    };
 
     return (
         <div className="detail-page__container">
-            <h2>{product.title}</h2>
+            <div className="detail-page__top-container">
             <div className="detail-page__image-container">
                 <img
-                    src={`.${product.imageSrc}`}
+                    src={`${process.env.PUBLIC_URL}${product.imageSrc}`}
                     alt="Image of DetailPage + descrition"
                 />
+            </div>
+            <div className="detail-page__main-description">
+                <h2>{product.title}</h2>
+                <Button
+                    text={!inBasket ? "Add to basket" : "Remove from basket"}
+                    className={`detail-page__button ${inBasket ? "detail-page__button--added" : ""}`}
+                    onClick={changeBasketState}
+                />
+
+            </div>
             </div>
             <h3>Параметры</h3>
             <ul>
@@ -55,7 +79,11 @@ const DetailPage = (props) => {
             </ul>
             <br/>
             <strong>
-                Статьи на тему:
+                Похожие: (ряд тайлов)
+            </strong>
+            <br/>
+            <strong>
+                Статьи на тему: (ряд превью тайлов)
             </strong>
             <br/>
             <strong>
@@ -65,4 +93,15 @@ const DetailPage = (props) => {
     );
 };
 
-export default DetailPage;
+// const mapStateToProps = state => {};
+
+const mapStateToProps = state => ({
+    products: state.productsReducer.products,
+})
+
+const mapDispatchToProps = dispatch => ({
+    addToBasket: id => dispatch(addToBasketAction(id)),
+    removeFromBasket: id => dispatch(removeFromBasketAction(id)),
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(_DetailPage)

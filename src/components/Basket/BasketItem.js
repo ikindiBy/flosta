@@ -17,7 +17,7 @@ const BasketItem = ({product, removeFromBasket, changeQuantity}) => {
     return (
         <div className='basket-item'>
             <img
-                    src={imageSrc}
+                    src={`${process.env.PUBLIC_URL}${imageSrc}`}
                     alt="Image of DetailPage + descrition"
             />
             <span>{title}</span>

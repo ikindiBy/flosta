@@ -8,7 +8,10 @@ const SliderItem = ({sliderId, shownSliderId, imgPath, altText, articleId}) => {
     const article = articles.find(item => item.articleId === articleId); 
     return (
         <div className={`item ${sliderId === shownSliderId ? 'item--shown' : 'item--hiden' }`}>
-            <img src={imgPath} alt={altText}/>
+            <img 
+                src={`${process.env.PUBLIC_URL}${imgPath}`}
+                alt={altText}
+            />
             <ShortDescriptionPlate 
                 title={article.title}
                 description={article.description}
