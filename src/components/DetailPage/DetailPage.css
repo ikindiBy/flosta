@@ -38,6 +38,7 @@
     color: rgb(208, 219, 215);
     border: none;
     font-size: 1rem;
+    margin-top: 16px;
 }
 
 .detail-page__button--added {

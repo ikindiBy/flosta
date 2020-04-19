@@ -1,6 +1,6 @@
-import React, {useState} from 'react';
+import React from 'react';
 import Button from '../Button';
-import InputCounter from './InputCounter';
+import InputCounter from '../InputCounter/InputCounter';
 
 
 const BasketItem = ({product, removeFromBasket, changeQuantity}) => {

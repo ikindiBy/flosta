@@ -1,7 +1,14 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import { addToBasketAction, removeFromBasketAction } from '../../actions';
+import InputCounter from '../InputCounter/InputCounter';
+
+
+import {
+    addToBasketAction,
+    removeFromBasketAction,
+    changeQuantityAction
+} from '../../actions';
 
 import Button from '../Button';
 
@@ -15,17 +22,23 @@ const _DetailPage = (props) => {
         addToBasket,
         removeFromBasket,
         products,
+        changeQuantity,
     } = props;
 
-    const product = products.find(product => product.productId === parseInt(params.id, 10));
+    const currentID = parseInt(params.id, 10);
 
-    const { inBasket } = product;
+    const product = products.find(product => product.productId === currentID);
 
-    console.log('____________>>', +params.id, product);
+    const { inBasket, quantityInBasket } = product;
+
+    console.log('____________>>', currentID, product);
 
     const changeBasketState = () => {
-        console.log('_______ --- _____>>', params.id);
-        inBasket ? removeFromBasket(+params.id) : addToBasket(+params.id)
+        inBasket ? removeFromBasket(currentID) : addToBasket(currentID)
+    };
+
+    const changeAmount = (amount) => {
+        changeQuantity(currentID, amount);
     };
 
     return (
@@ -39,6 +52,7 @@ const _DetailPage = (props) => {
             </div>
             <div className="detail-page__main-description">
                 <h2>{product.title}</h2>
+                <InputCounter onInputChange={changeAmount} quantityInBasket={quantityInBasket}/>
                 <Button
                     text={!inBasket ? "Add to basket" : "Remove from basket"}
                     className={`detail-page__button ${inBasket ? "detail-page__button--added" : ""}`}
@@ -93,8 +107,6 @@ const _DetailPage = (props) => {
     );
 };
 
-// const mapStateToProps = state => {};
-
 const mapStateToProps = state => ({
     products: state.productsReducer.products,
 })
@@ -102,6 +114,7 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch => ({
     addToBasket: id => dispatch(addToBasketAction(id)),
     removeFromBasket: id => dispatch(removeFromBasketAction(id)),
+    changeQuantity: (id, quantity) => dispatch(changeQuantityAction(id, quantity)),
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(_DetailPage)

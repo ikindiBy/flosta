@@ -16,25 +16,25 @@ const productsReducer = (state = initialState, action) => {
       case 'ADD_TO_BASKET':
         return {
           products: state.products.map(
-            item => item.productId === action.id ? {...item, inBasket: !item.inBasket, quantityInBasket: 1} : item
+            item => item.productId === action.id
+            ? {
+                ...item,
+                inBasket: !item.inBasket,
+                quantityInBasket: item.quantityInBasket || 1,
+            } 
+            : item
             ),
-          // productsInBasket: [
-          //   ...state.productsInBasket,
-          //   state.products.filter(item => item.productId === action.id)[0],
-          // ]
         }
       case 'REMOVE_FROM_BASKET':
           return {
             products: state.products.map(
-              item => item.productId === action.id ? {...item, inBasket: !item.inBasket} : item
+              item => item.productId === action.id
+              ? {...item, inBasket: !item.inBasket, quantityInBasket: 1}
+              : item
               ),
-            // productsInBasket: [
-            //   ...state.productsInBasket.filter(item => item.productId !== action.id),
-            // ]
           }
         
       case 'CHANGE_QUANTITY_IN_BASKET':
-        // console.log('______action_', action);
           return {
             ...state,
             products: state.products.map(

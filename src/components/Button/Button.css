@@ -3,3 +3,8 @@
     background-color: transparent;
     cursor: pointer;
 }
+
+.button-base--main-theme {
+    background-color: rgba(1, 77, 51, .85);
+    color: rgb(208, 219, 215);
+}

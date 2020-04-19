@@ -1,6 +1,8 @@
 import React from 'react';
 import Button from '../Button';
 
+import './InputCounter.css';
+
 const InputCounter = ({ onInputChange, quantityInBasket }) => {
 
     const decreaseAmount = () => {
