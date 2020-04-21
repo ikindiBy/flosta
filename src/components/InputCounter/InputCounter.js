@@ -3,7 +3,7 @@ import Button from '../Button';
 
 import './InputCounter.css';
 
-const InputCounter = ({ onInputChange, quantityInBasket }) => {
+const InputCounter = ({ onInputChange, quantityInBasket, className }) => {
 
     const decreaseAmount = () => {
         if (quantityInBasket > 0) {
@@ -31,7 +31,7 @@ const InputCounter = ({ onInputChange, quantityInBasket }) => {
     }
 
     return (
-        <div className='input-counter'>
+        <div className={`input-counter ${className}`}>
             <Button
                     text="-"
                     className="input-counter__minus-button"

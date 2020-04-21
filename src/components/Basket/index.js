@@ -37,7 +37,8 @@ const _Basket = ({ productsInBasket, removeFromBasket, changeQuantity }) => {
                     />
                 )}
                 <div className='basket__summ-line'>
-                    <strong>Summ: {summ}</strong>
+                    <span>Summ:</span>
+                    <span>{summ}</span>
                 </div>
             </div>
             : <div className='basket--empty'>

@@ -16,19 +16,29 @@ const BasketItem = ({product, removeFromBasket, changeQuantity}) => {
 
     return (
         <div className='basket-item'>
-            <img
-                    src={`${process.env.PUBLIC_URL}${imageSrc}`}
-                    alt="Image of DetailPage + descrition"
-            />
-            <span>{title}</span>
-            <span>{price}</span>
-            <InputCounter onInputChange={changeAmount} quantityInBasket={quantityInBasket}/>
-            <span>{quantityInBasket * price}</span>
-            <Button
-                    text="Remove"
-                    className="basket-item__remove-button"
-                    onClick={removeItem}
-            />
+            <div className='basket-item__preview'>
+                <img
+                        src={`${process.env.PUBLIC_URL}${imageSrc}`}
+                        alt="Image of DetailPage + descrition"
+                />
+                <span>{title}</span>
+            </div>
+            <div className='basket-item__managed-part'>
+                <div className='basket-item__price'>
+                    <span>{price}</span>
+                    <InputCounter
+                        onInputChange={changeAmount}
+                        quantityInBasket={quantityInBasket}
+                        className='basket-item__input-counter'
+                    />
+                    <span>{quantityInBasket * price}</span>
+                </div>
+                <Button
+                        text="Remove"
+                        className="basket-item__remove-button"
+                        onClick={removeItem}
+                />
+            </div>
         </div>
     )
 };
