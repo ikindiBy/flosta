@@ -37,6 +37,7 @@ export const products = [
         productId: 1029,
         title: 'Petunia Pink',
         imageSrc: '/img/img_16.jpg',
+        imagesGallery: ['/img/img_16_01.jpg', '/img/img_15.jpg', '/img/img_14.jpg'],
         description: 'Lorem property to create rounded images.',
         price: 12,
         groupId: 10,
