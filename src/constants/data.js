@@ -37,12 +37,19 @@ export const products = [
         productId: 1029,
         title: 'Petunia Pink',
         imageSrc: '/img/img_16.jpg',
-        imagesGallery: ['/img/img_16_01.jpg', '/img/img_15.jpg', '/img/img_14.jpg'],
+        imagesGallery: [
+            '/img/img_16.jpg',
+            '/img/img_16_01.jpg',
+            '/img/img_15.jpg',
+            '/img/img_14.jpg',
+            '/img/img_16_02.jpg'
+        ],
         description: 'Lorem property to create rounded images.',
         price: 12,
         groupId: 10,
         subGroupId: 101,
         type: 'Ampel',
+        isPopular: true,
     },
     {
         productId: 1020,
@@ -73,6 +80,7 @@ export const products = [
         groupId: 10,
         subGroupId: 101,
         type: 'Ampel',
+        isPopular: true,
     },
     {
         productId: 1023,
@@ -93,6 +101,7 @@ export const products = [
         groupId: 10,
         subGroupId: 102,
         type: 'Bush',
+        isPopular: true,
     },
     {
         productId: 1002,
@@ -109,6 +118,7 @@ export const products = [
         description: 'Koo your organization or with the entire world using.',
         price: 85,
         groupId: 20,
+        isPopular: true,
     },
     {
         productId: 1031,
@@ -117,6 +127,7 @@ export const products = [
         description: 'Lorem property to create rounded images.',
         price: 12,
         groupId: 20,
+        isPopular: true,
     },
     {
         productId: 1004,

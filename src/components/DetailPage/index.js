@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { connect } from 'react-redux';
 
 import InputCounter from '../InputCounter/InputCounter';
@@ -11,6 +11,7 @@ import {
 } from '../../actions';
 
 import Button from '../Button';
+import Carousel from '../Carousel/Carousel';
 
 import './DetailPage.css';  
 
@@ -26,10 +27,8 @@ const _DetailPage = (props) => {
     } = props;
 
     const currentID = parseInt(params.id, 10);
-
     const product = products.find(product => product.productId === currentID);
-
-    const { inBasket, quantityInBasket, imagesGallery } = product;
+    const { inBasket, quantityInBasket } = product;
 
     const changeBasketState = () => {
         inBasket ? removeFromBasket(currentID) : addToBasket(currentID)
@@ -37,27 +36,13 @@ const _DetailPage = (props) => {
 
     const changeAmount = (amount) => {
         changeQuantity(currentID, amount);
+        
     };
 
     return (
         <div className="detail-page__container">
             <div className="detail-page__top-container">
-                <div className="detail-page__image-container">
-                    <div className="detail-page__preview-gallery">
-                        {imagesGallery && imagesGallery.length && imagesGallery.map(imgGallerySrc => (
-                            <img
-                                key={imgGallerySrc}
-                                className="detail-page__preview-gallery-item"
-                                src={`${process.env.PUBLIC_URL}${imgGallerySrc}`}
-                                alt="Image of DetailPage + descrition"
-                            />   
-                        ))}
-                    </div>
-                    <img className="detail-page__preview-gallery-current"
-                        src={`${process.env.PUBLIC_URL}${product.imageSrc}`}
-                        alt="Image of DetailPage + descrition"
-                    />
-                </div>
+                <Carousel product={product} />
                 <div className="detail-page__main-description">
 
                         <h2>{product.title}</h2>
@@ -68,15 +53,15 @@ const _DetailPage = (props) => {
                             onClick={changeBasketState}
                         />
                         <div className="detail-page__description-short">
-                        <h3>Основные параметры</h3>
-                        <ul>
-                            <li>Время цветения: 6-9 </li>
-                            <li>Высота растения: 25см</li>
-                            <li>Диаметр куста: 30см </li>
-                            <li>Размер соцветия: 3см </li>
-                            <li>Морозостойкость: слабая </li>
-                        </ul>
-                    </div>
+                            <h3>Основные параметры</h3>
+                            <ul>
+                                <li>Время цветения: 6-9 </li>
+                                <li>Высота растения: 25см</li>
+                                <li>Диаметр куста: 30см </li>
+                                <li>Размер соцветия: 3см </li>
+                                <li>Морозостойкость: слабая </li>
+                            </ul>
+                        </div>
                     </div>
             </div>
             <div className="detail-page__description-block">

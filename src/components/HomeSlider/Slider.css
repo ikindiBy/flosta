@@ -3,7 +3,7 @@
     max-width: 100%;
     position: relative;
     margin: auto;
-    height: 400px;
+    height: 500px;
     margin-bottom: 15px;
 }
 
@@ -69,7 +69,6 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    /* Тень*/
     text-shadow: 1px 1px 1px #000, 0 0 1em #000;
 }
 /* Кружочки */
