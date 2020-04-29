@@ -1,0 +1,12 @@
+.filter-item {
+    box-sizing: border-box;
+    border-bottom: 1px solid  rgba(193, 236, 74, 0.8);
+}
+
+.filter-item--active {
+    background-color: rgba(142, 190, 9, 0.8);
+}
+
+.filter-item:hover {
+    border-bottom: 1px solid green;
+}

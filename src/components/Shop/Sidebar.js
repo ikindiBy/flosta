@@ -16,6 +16,16 @@ const _Sidebar = ({visibilityFilter, changeActiveFilter}) => {
         changeActiveFilter(filter);
     }
 
+    const checkActivity = (groupId, subGroupId) => {
+        if (!visibilityFilter.group && visibilityFilter === groupId) {
+            return true;
+        } else if (!subGroupId && !visibilityFilter.subGroup) {
+            return groupId === visibilityFilter.group;
+        } else {
+            return groupId === visibilityFilter.group && subGroupId === visibilityFilter.subGroup;
+        }
+    }
+
     return (
             <div className='shop__sidebar'>
                 <ul className='shop__first-level-list'>
@@ -24,6 +34,7 @@ const _Sidebar = ({visibilityFilter, changeActiveFilter}) => {
                         filterData={SHOW_ALL}
                         onClick={onFilterClick}
                         name="All products"
+                        isActive={checkActivity(SHOW_ALL)}
                     />
                     {groups.map(group => {
                         if (group.subGroup) {
@@ -34,6 +45,7 @@ const _Sidebar = ({visibilityFilter, changeActiveFilter}) => {
                                         filterData={{group: group.groupId}}
                                         onClick={onFilterClick}
                                         name={group.name}
+                                        isActive={checkActivity(group.groupId)}
                                     />
                                     <ul className='shop__second-level-list'>
                                         {group.subGroup.map(subGroup => {
@@ -42,6 +54,7 @@ const _Sidebar = ({visibilityFilter, changeActiveFilter}) => {
                                                 filterData={{group: group.groupId, subGroup: subGroup.subGroupId}}
                                                 onClick={onFilterClick}
                                                 name={subGroup.name}
+                                                isActive={checkActivity(group.groupId, subGroup.subGroupId)}
                                                 />
                                         })}
                                     </ul>
@@ -54,6 +67,7 @@ const _Sidebar = ({visibilityFilter, changeActiveFilter}) => {
                                 filterData={{group: group.groupId}}
                                 onClick={onFilterClick}
                                 name={group.name}
+                                isActive={checkActivity(group.groupId)}
                             />
                         )
                     })}

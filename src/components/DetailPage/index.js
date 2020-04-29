@@ -26,17 +26,24 @@ const _DetailPage = (props) => {
         changeQuantity,
     } = props;
 
+    const [amountOnDP, setAmountOnDP] = useState(0);
+
     const currentID = parseInt(params.id, 10);
     const product = products.find(product => product.productId === currentID);
     const { inBasket, quantityInBasket } = product;
 
     const changeBasketState = () => {
-        inBasket ? removeFromBasket(currentID) : addToBasket(currentID)
+        if (inBasket) {
+            removeFromBasket(currentID);
+            changeQuantity(currentID, 0);
+        } else {
+            changeQuantity(currentID, amountOnDP);
+            addToBasket(currentID);
+        }
     };
 
     const changeAmount = (amount) => {
-        changeQuantity(currentID, amount);
-        
+        setAmountOnDP(amount);
     };
 
     return (
@@ -46,7 +53,7 @@ const _DetailPage = (props) => {
                 <div className="detail-page__main-description">
 
                         <h2>{product.title}</h2>
-                        <InputCounter onInputChange={changeAmount} quantityInBasket={quantityInBasket}/>
+                        <InputCounter onInputChange={changeAmount} quantityInBasket={amountOnDP}/>
                         <Button
                             text={!inBasket ? "Add to basket" : "Remove from basket"}
                             className={`detail-page__button ${inBasket ? "detail-page__button--added" : ""}`}

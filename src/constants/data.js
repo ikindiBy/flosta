@@ -55,6 +55,9 @@ export const products = [
         productId: 1020,
         title: 'Petunia Red',
         imageSrc: '/img/img_1.jpg',
+        imagesGallery: [
+            '/img/img_1.jpg',
+        ],
         description: 'Lorem property to create rounded images.',
         price: 12,
         groupId: 10,
@@ -65,6 +68,9 @@ export const products = [
         productId: 1021,
         title: 'Petunia Gold tower',
         imageSrc: '/img/img_12.jpg',
+        imagesGallery: [
+            '/img/img_12.jpg',
+        ],
         description: 'Lorem property to create rounded images.',
         price: 12,
         groupId: 10,
@@ -75,6 +81,9 @@ export const products = [
         productId: 1022,
         title: 'Petunia Blue cloud',
         imageSrc: '/img/img_13.jpg',
+        imagesGallery: [
+            '/img/img_13.jpg',
+        ],
         description: 'Lorem property to create rounded images.',
         price: 12,
         groupId: 10,

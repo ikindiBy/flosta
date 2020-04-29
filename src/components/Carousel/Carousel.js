@@ -16,7 +16,6 @@ const Carousel = ({ product }) => {
     const [currentIndexes, setCurrentIndexes] = useState({first: 0, last: AMOUNT_DESCTOP - 1});
     
     if (!imagesGallery) {
-        console.log('________22___>> ', imagesGallery);
         return null;
     }
 
@@ -43,7 +42,7 @@ const Carousel = ({ product }) => {
 
 
     return (
-      <div className="carousel-container">
+    <div className="carousel-container">
           <div className={
                 `carousel-container__preview-gallery
                 ${withTopArrow && "carousel-container__preview-gallery--top-arrow"}
@@ -76,7 +75,7 @@ const Carousel = ({ product }) => {
             />
           </div>
       </div>
-    );
+      );
 };
 
 export default Carousel;
