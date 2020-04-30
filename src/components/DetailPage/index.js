@@ -26,11 +26,11 @@ const _DetailPage = (props) => {
         changeQuantity,
     } = props;
 
-    const [amountOnDP, setAmountOnDP] = useState(0);
+    const [amountOnDP, setAmountOnDP] = useState(1);
 
     const currentID = parseInt(params.id, 10);
     const product = products.find(product => product.productId === currentID);
-    const { inBasket, quantityInBasket } = product;
+    const { inBasket } = product;
 
     const changeBasketState = () => {
         if (inBasket) {

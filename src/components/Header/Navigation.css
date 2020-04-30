@@ -1,18 +1,25 @@
 .navigation {
     width: 100%;
-    
+    height: 50%;
+    padding-left: 72%;
     font-size: 1.25rem;
 }
 
 .nav-list {
-    padding: 16px 16px 16px 160px;
+  height: 100%;
     display: flex;
     justify-content:flex-start;
     list-style-type:none;
   }
   
   .nav-list li a {
+    display: block;
+    height: 100%;
     margin-right: 24px;
+  }
+
+  .nav-list li:hover {
+    border-bottom: 2px solid greenyellow;
   }
   
   .active, a:focus {

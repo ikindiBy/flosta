@@ -3,29 +3,24 @@ import Button from '../Button';
 
 import './InputCounter.css';
 
+const MIN_COUNT = 1;
+const MAX_COUNT = 999;
+
 const InputCounter = ({ onInputChange, quantityInBasket, className }) => {
 
     const decreaseAmount = () => {
-        if (quantityInBasket > 0) {
-            if (quantityInBasket === 1) {
-                onInputChange(0);
-            } else {
-                onInputChange(quantityInBasket - 1);
-            }
-        }
+            onInputChange(quantityInBasket - 1);
     };
     const increaseAmount = () => {
-        if (quantityInBasket < 999 && quantityInBasket > 0) {
-            onInputChange(quantityInBasket + 1);
-        } else if (quantityInBasket === 0) {
-            onInputChange(1);
-        }
+        onInputChange(quantityInBasket + 1);
     };
+
     const handleAmountChange = (e) => {
         const amountNumber = parseInt(e.target.value, 10);
+        console.log('___________>>> ', e.target.value);
         if (e.target.value === '') {
-            onInputChange(0);
-        } else if (amountNumber < 1000 && amountNumber > 0) {
+            onInputChange(MIN_COUNT);
+        } else if (amountNumber <= MAX_COUNT && amountNumber >= MIN_COUNT) {
             onInputChange(amountNumber);
         }
     }
@@ -34,8 +29,12 @@ const InputCounter = ({ onInputChange, quantityInBasket, className }) => {
         <div className={`input-counter ${className}`}>
             <Button
                     text="-"
-                    className="input-counter__minus-button"
+                    className={
+                        `input-counter__button
+                        ${quantityInBasket === MIN_COUNT && "input-counter__button--disabled"}`
+                    }
                     onClick={decreaseAmount}
+                    disabled={quantityInBasket === MIN_COUNT}
             />
             <input
                 type="number"
@@ -45,8 +44,12 @@ const InputCounter = ({ onInputChange, quantityInBasket, className }) => {
             />
             <Button
                     text="+"
-                    className="input-counter__add-button"
+                    className={
+                        `input-counter__button
+                        ${quantityInBasket === MAX_COUNT && "input-counter__button--disabled"}`
+                    }
                     onClick={increaseAmount}
+                    disabled={quantityInBasket === MAX_COUNT}
             />
         </div>
     )

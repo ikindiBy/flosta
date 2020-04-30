@@ -16,8 +16,7 @@
     padding: 0;
 }
 
-.input-counter__add-button,
-.input-counter__minus-button {
+.input-counter__button {
     height: 100%;
     width: 40px;
     background-color: rgba(1, 77, 51, .85);
@@ -29,4 +28,12 @@
 .input-counter input[type=number]::-webkit-inner-spin-button, 
 .input-counter input[type=number]::-webkit-outer-spin-button { 
   -webkit-appearance: none; 
+}
+
+.input-counter__button--disabled {
+    background-color: rgba(21, 43, 35, 0.85);
+}
+
+.input-counter__button--disabled:hover {
+    box-shadow: none;
 }
