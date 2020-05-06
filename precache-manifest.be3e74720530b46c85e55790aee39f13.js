@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "8ec602703bf81109da5e641921f528b1",
+    "revision": "a4aa22f3a2da8dffe0407c21eb822f79",
     "url": "/flosta/index.html"
   },
   {
-    "revision": "b9cfea67a98b97f6597e",
-    "url": "/flosta/static/css/main.36aaa54e.chunk.css"
+    "revision": "90135a5de0ff5a001495",
+    "url": "/flosta/static/css/main.09f241d3.chunk.css"
   },
   {
     "revision": "ac630e3d991497adbff6",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/flosta/static/js/2.aa00f2d9.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "b9cfea67a98b97f6597e",
-    "url": "/flosta/static/js/main.3b221152.chunk.js"
+    "revision": "90135a5de0ff5a001495",
+    "url": "/flosta/static/js/main.1191dc8d.chunk.js"
   },
   {
     "revision": "b44feebb5595698979ea",
