@@ -13,7 +13,9 @@ const FilterItem = ({
         onClick(e, filterData);
     }
     return (
-        <li className={`filter-item ${isActive && "filter-item--active"}`}><a href="" onClick={onFilterClick}>{name}</a></li>
+        <li className={`filter-item ${isActive && "filter-item--active"}`}>
+            <a href="" onClick={onFilterClick}>{name}</a>
+        </li>
     )
 };
 

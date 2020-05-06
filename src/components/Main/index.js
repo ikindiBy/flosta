@@ -13,12 +13,12 @@ const Main = () => {
     return (
         <main className="main-wrapper">
             <Switch>
-              <Route path="/shop" component={Shop}/>
+              <Route path="/catalog" component={Shop}/>
               <Route path='/page/:id' render={(props) => (<ArticlePage {...props} />)}/>
               <Route path='/product/:id' render={(props) => (<DetailPage {...props} />)}/>
               <Route path="/blog" component={Blog}/>
               <Route path="/calendar" component={Calendar}/>
-              <Route path="/basket" component={Basket}/>
+              <Route path="/mylist" component={Basket}/>
               <Route path="/" component={Home}/>
             </Switch>
         </main>
