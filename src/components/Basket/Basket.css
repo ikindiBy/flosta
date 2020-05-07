@@ -107,3 +107,52 @@
     width: 72px;
     text-align: center;
 }
+
+@media (max-width: 860px) {
+    .basket {
+        padding: 24px 8px;
+    }
+    .basket-item {
+        padding: 0 0 8px 0;
+
+        height: auto;
+        flex-direction: column;
+
+    }
+
+    .basket-item__preview, .basket-item__managed-part, .basket-item__price {
+        width: 100%;
+    }
+
+    .basket-item__preview, .basket-item__managed-part{
+        flex-direction: column;
+    }
+
+    .basket-item__preview, .basket-item__price {
+        margin-bottom: 8px;
+    }
+
+    .basket-item__price {
+        justify-content: space-around;
+    }
+
+    .basket-item__preview img {
+        width: 80%;
+        max-height: 240px;
+        margin: 0 0 8px 0;
+    }
+
+    .basket__summ-line {
+        text-align: end;
+    }
+
+    .basket__summ-line span:first-child {
+        width: auto;
+    }
+
+    .basket-item__price span,
+    .basket-item__input-counter {
+        margin: 0;
+        width: auto;
+    }
+}

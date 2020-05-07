@@ -83,6 +83,11 @@
       flex-direction: column;
     }
 
+    .navigation {
+      padding-left: 0;
+      font-size: 1.2rem;
+  }
+
     .header-logo {
       width: 100%;
       transform: rotate(0);
@@ -96,5 +101,9 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
+    }
+
+    .nav-list__item {
+      margin-bottom: 8px;
     }
    }

@@ -15,3 +15,13 @@
     justify-content: space-evenly;
     align-items: center;
 }
+
+@media (max-width: 700px) {
+    .footer-wrapper {
+        height: auto;
+    } 
+
+    .footer-container {
+        text-align: center;
+    } 
+}
