@@ -69,3 +69,30 @@
 .detail-page__description-short {
     margin-top: 16px;
 }
+
+@media (max-width: 700px) {
+    .detail-page__top-container {
+        flex-direction: column;
+    }
+
+    .carousel-container,
+    .detail-page__main-description {
+        width: 100%;
+    }
+}
+
+@media (max-width: 400px) {
+    .detail-page__description-block {
+        flex-direction: column;
+    }
+
+    .detail-page__main-description h2 {
+        margin: 8px 0;
+    }
+
+    .detail-page__description-block-left,
+    .detail-page__description-block-right
+    {
+        width: 100%;
+    }
+}

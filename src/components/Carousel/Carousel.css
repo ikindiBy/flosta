@@ -71,3 +71,22 @@
     padding-bottom: 0;
 }
 
+@media (max-width: 400px) {
+    .carousel-container {
+        flex-direction: column;
+        margin-bottom: 8px;
+        padding-right: 0;
+        height: auto;;
+    }
+
+    .carousel-container__preview-gallery {
+        display: none;
+        /* flex-direction: row;
+        width: 100%; */
+    }
+
+    .carousel-container__main-showing {
+        width: 96%;
+        margin: 0 auto;
+    }
+}
