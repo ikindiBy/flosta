@@ -24,3 +24,25 @@
     height: 100%;
     object-fit: cover;
 }
+
+@media (max-width: 700px) {
+    .article-page__container p {
+        padding: 0 24px;
+    }
+
+    .article-page__image-container {
+        height: 320px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 460px) {
+    .article-page__container p {
+        padding: 0 8px;
+    }
+
+    .article-page__image-container {
+        height: 236px;
+        margin-bottom: 8px;
+    }
+}

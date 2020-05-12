@@ -16,7 +16,6 @@ const ArticleItem = ({
     const history = useHistory();
 
     const redirectToPage = (e) => {
-        console.log('_____________>> ', id);
         e.preventDefault();
         history.push(`/page/${id}`);
     };
@@ -30,8 +29,10 @@ const ArticleItem = ({
                     />
             </div>
             <div className="article-item__description">
-                <h3>{title}</h3>
-                <p>{description}</p>
+                <div className="article-item__description-text">
+                    <h3>{title}</h3>
+                    <p>{description}</p>
+                </div>
                 <Button
                     text="Read more..."
                     className="article-item__read-more-button"

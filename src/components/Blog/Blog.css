@@ -5,5 +5,17 @@
 }
 
 .articles-container__list {
-    padding: 0 150px;
+    padding: 0 144px;
+}
+
+@media (max-width: 960px) {
+    .articles-container__list {
+        padding: 0 24px;
+    }
+}
+
+@media (max-width: 460px) {
+    .articles-container__list {
+        padding: 0 8px;
+    }
 }

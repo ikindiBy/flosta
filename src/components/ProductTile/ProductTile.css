@@ -82,9 +82,9 @@
 
 @media (max-width: 420px) {
     .product-tile {
-        width: calc(100%/2 - 24px);
-        min-width: 180px;
+        width: calc(100%/2 - 12px);
+        min-width: auto;
         height: 400px;
-        margin: 0 10px 8px 0;
+        margin: 0 4px 8px 0;
     }
 }
