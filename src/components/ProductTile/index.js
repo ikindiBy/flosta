@@ -1,6 +1,14 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 
+import {
+    ADD_TO_BASKET,
+    REMOVE_FROM_BASKET,
+    PRICE_LABEL,
+    PRICE_CURRENCY,
+    TYPE_LABEL,
+ } from '../../constants/text';
+
 import Button from '../Button';
 
 import './ProductTile.css';
@@ -39,12 +47,12 @@ const ProductTile = ({
                         <h4>{title}</h4>
                     </Link>
                     {description && <p>{description}</p>}
-                    {!isDomenstration && <span>Price: {price}</span>}
-                    {type ? <span>Type: {type}</span> : null}
+                    {!isDomenstration && <span>{PRICE_LABEL}: {`${price} ${PRICE_CURRENCY}`}</span>}
+                    {type ? <span>{TYPE_LABEL}: {type}</span> : null}
                 </div>
                 <div className="product-tile__control">
                     {!isDomenstration && <Button
-                            text={!inBasket ? "Add to basket" : "Remove from basket"}
+                            text={!inBasket ? ADD_TO_BASKET : REMOVE_FROM_BASKET}
                             className={`product-tile__button ${inBasket ? "product-tile__button--added" : ""}`}
                             onClick={changeBasketState}
                     />}

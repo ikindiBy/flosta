@@ -1,6 +1,10 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { connect } from 'react-redux';
 import { removeFromBasketAction, changeQuantityAction } from '../../actions';
+import {
+    BASKET_EMPTY_LABEL,
+    SUMM_LABEL,
+ } from '../../constants/text';
 
 import BasketItem from './BasketItem';
 
@@ -37,12 +41,12 @@ const _Basket = ({ productsInBasket, removeFromBasket, changeQuantity }) => {
                     />
                 )}
                 <div className='basket__summ-line'>
-                    <span>Summ:</span>
+                    <span>{SUMM_LABEL}</span>
                     <span>{summ}</span>
                 </div>
             </div>
             : <div className='basket--empty'>
-                    <p>Basket is empty</p>
+                    <p>{BASKET_EMPTY_LABEL}</p>
             </div>
 };
 

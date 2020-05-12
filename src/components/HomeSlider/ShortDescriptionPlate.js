@@ -1,11 +1,13 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
 
+import { READ_MORE } from '../../constants/text';
+
 import './ShortDescriptionPlate.css';
 
 import Button from '../Button';
 
-const READ_MORE = 'Далее...';
+
 
 const ShortDescriptionPlate = ({title, description, articleId}) => {
     const history = useHistory();

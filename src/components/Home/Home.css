@@ -9,3 +9,9 @@
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
+
+.block-tiles__title {
+    margin-left: 24px;
+}
+
+

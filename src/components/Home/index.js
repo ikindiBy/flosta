@@ -1,6 +1,11 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
+
+import {
+    POPULAR_GOODS_LABEL,
+ } from '../../constants/text';
+
 import ProductTile from '../ProductTile';
 import Slider from '../HomeSlider/Slider';
 
@@ -16,7 +21,7 @@ const _Home = ({products}) => {
         <div className="home">
             <Slider />
             <div className="block-tiles">
-                <h2 className="block-tiles__title">Popular goods</h2>
+                <h2 className="block-tiles__title">{POPULAR_GOODS_LABEL}</h2>
                 <div className="block-tiles__row">
                 {products.map(product => 
                     <ProductTile

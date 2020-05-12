@@ -1,6 +1,15 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
 
+import {
+    ADD_TO_BASKET,
+    REMOVE_FROM_BASKET,
+    MAIN_PARAMETERS_LABEL,
+    USING_LABEL,
+    CARE_LABEL,
+    INTERESTING_LABEL,
+ } from '../../constants/text';
+
 import InputCounter from '../InputCounter/InputCounter';
 
 
@@ -55,12 +64,12 @@ const _DetailPage = (props) => {
                         <h2>{product.title}</h2>
                         <InputCounter onInputChange={changeAmount} quantityInBasket={amountOnDP}/>
                         <Button
-                            text={!inBasket ? "Add to basket" : "Remove from basket"}
+                            text={!inBasket ? ADD_TO_BASKET : REMOVE_FROM_BASKET}
                             className={`detail-page__button ${inBasket ? "detail-page__button--added" : ""}`}
                             onClick={changeBasketState}
                         />
                         <div className="detail-page__description-short">
-                            <h3>Основные параметры</h3>
+                            <h3>{MAIN_PARAMETERS_LABEL}</h3>
                             <ul>
                                 <li>Время цветения: 6-9 </li>
                                 <li>Высота растения: 25см</li>
@@ -73,14 +82,14 @@ const _DetailPage = (props) => {
             </div>
             <div className="detail-page__description-block">
                 <div className="detail-page__description-block-left">
-                    <h3>Посадка</h3>
+                    <h3>{USING_LABEL}</h3>
                     <ul>
                         <li>Время посадки: </li>
                         <li>Расстояние между растениями: </li>
                         <li>Освещенность: яркий солнечный свет </li>
                         <li>Почва: плодородная, чернозем, слабокислая </li>
                     </ul>
-                    <h3>Интересные особенноси</h3>
+                    <h3>{INTERESTING_LABEL}</h3>
                     <ul>
                         <li>Медонос</li>
                         <li>Привлекает бабочек</li>
@@ -88,7 +97,7 @@ const _DetailPage = (props) => {
                     </ul>
                 </div>
                 <div className="detail-page__description-block-right">
-                    <h3>Уход</h3>
+                    <h3>{CARE_LABEL}</h3>
                     <ul>
                         <li>Полив: </li>
                         <li>Обрезка/прищипывание: 1 раз в 2 недели</li>
@@ -98,7 +107,7 @@ const _DetailPage = (props) => {
                 </div>
             </div>
             
-            <br/>
+            {/* <br/>
             <strong>
                 Похожие: (ряд тайлов)
             </strong>
@@ -113,7 +122,7 @@ const _DetailPage = (props) => {
             <br/>
             <strong>
                 Примеры использования (фото):
-            </strong>
+            </strong> */}
         </div>
     );
 };

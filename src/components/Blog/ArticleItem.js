@@ -1,11 +1,11 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
 
+import { READ_MORE } from '../../constants/text';
+
 import Button from '../Button';
 
 import './ArticleItem.css';
-
-
 
 const ArticleItem = ({
     imageSrc,
@@ -34,7 +34,7 @@ const ArticleItem = ({
                     <p>{description}</p>
                 </div>
                 <Button
-                    text="Read more..."
+                    text={READ_MORE}
                     className="article-item__read-more-button"
                     onClick={redirectToPage}
                 />

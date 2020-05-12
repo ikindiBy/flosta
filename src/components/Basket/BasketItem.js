@@ -2,6 +2,10 @@ import React from 'react';
 import Button from '../Button';
 import InputCounter from '../InputCounter/InputCounter';
 
+import {
+    REMOVE_FROM_BASKET,
+ } from '../../constants/text';
+
 
 const BasketItem = ({product, removeFromBasket, changeQuantity}) => {
     const { title, imageSrc, price, productId, quantityInBasket } = product;
@@ -34,7 +38,7 @@ const BasketItem = ({product, removeFromBasket, changeQuantity}) => {
                     <span>{quantityInBasket * price}</span>
                 </div>
                 <Button
-                        text="Remove"
+                        text={REMOVE_FROM_BASKET}
                         className="basket-item__remove-button"
                         onClick={removeItem}
                 />
