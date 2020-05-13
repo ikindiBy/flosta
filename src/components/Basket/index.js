@@ -13,7 +13,6 @@ import './Basket.css';
 const getProductsInBasket = products => products.filter(product => product.inBasket);
 
 const _Basket = ({ productsInBasket, removeFromBasket, changeQuantity }) => {
-    // console.log('____ productsInBasket___>> ', productsInBasket);
 
     const [summ, setSumm] = useState(0);
 

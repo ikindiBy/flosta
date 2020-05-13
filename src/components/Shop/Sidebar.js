@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 import { SHOW_ALL } from '../../constants';
+import {  ALL_GOODS } from '../../constants/text';
 import { groups } from '../../constants/data';
 
 import { setVisibilityFilter } from '../../actions';
@@ -33,7 +34,7 @@ const _Sidebar = ({visibilityFilter, changeActiveFilter}) => {
                         key={SHOW_ALL}
                         filterData={SHOW_ALL}
                         onClick={onFilterClick}
-                        name="All products"
+                        name={ALL_GOODS}
                         isActive={checkActivity(SHOW_ALL)}
                     />
                     {groups.map(group => {

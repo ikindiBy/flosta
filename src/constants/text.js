@@ -1,4 +1,5 @@
 export const READ_MORE = 'Далее...';
+export const ALL_GOODS = 'Все товары';
 
 export const ADD_TO_BASKET = 'В список';
 

@@ -44,7 +44,7 @@
     margin: 0 auto 8px auto;
     height: 120px;
     width: 80%;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .carousel-container__preview-gallery-item:first-child {
