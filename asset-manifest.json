@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/flosta/static/css/main.b9b5df92.chunk.css",
-    "main.js": "/flosta/static/js/main.e984a81b.chunk.js",
-    "main.js.map": "/flosta/static/js/main.e984a81b.chunk.js.map",
+    "main.css": "/flosta/static/css/main.391d57dd.chunk.css",
+    "main.js": "/flosta/static/js/main.fe8f9559.chunk.js",
+    "main.js.map": "/flosta/static/js/main.fe8f9559.chunk.js.map",
     "runtime-main.js": "/flosta/static/js/runtime-main.d7824933.js",
     "runtime-main.js.map": "/flosta/static/js/runtime-main.d7824933.js.map",
     "static/js/2.aa00f2d9.chunk.js": "/flosta/static/js/2.aa00f2d9.chunk.js",
     "static/js/2.aa00f2d9.chunk.js.map": "/flosta/static/js/2.aa00f2d9.chunk.js.map",
     "index.html": "/flosta/index.html",
-    "precache-manifest.23f73682e9c80a7de23b5638ad22a467.js": "/flosta/precache-manifest.23f73682e9c80a7de23b5638ad22a467.js",
+    "precache-manifest.2a99d4cc2dd6bbf973e0f075abf840fb.js": "/flosta/precache-manifest.2a99d4cc2dd6bbf973e0f075abf840fb.js",
     "service-worker.js": "/flosta/service-worker.js",
-    "static/css/main.b9b5df92.chunk.css.map": "/flosta/static/css/main.b9b5df92.chunk.css.map",
+    "static/css/main.391d57dd.chunk.css.map": "/flosta/static/css/main.391d57dd.chunk.css.map",
     "static/js/2.aa00f2d9.chunk.js.LICENSE.txt": "/flosta/static/js/2.aa00f2d9.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.d7824933.js",
     "static/js/2.aa00f2d9.chunk.js",
-    "static/css/main.b9b5df92.chunk.css",
-    "static/js/main.e984a81b.chunk.js"
+    "static/css/main.391d57dd.chunk.css",
+    "static/js/main.fe8f9559.chunk.js"
   ]
 }
