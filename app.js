@@ -8,7 +8,7 @@ const app = express();
 app.use('/api/auth', require('./routes/auth.routs'));
 
 if (process.env.NODE_ENV === 'production') {
-    app.use('/', app.static(path.join(__dirname, 'client', 'build')));
+    app.use('/', express.static(path.join(__dirname, 'client', 'build')));
 
     app.get('*', (req, res) => {
         res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'))
