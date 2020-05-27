@@ -7,6 +7,8 @@ const app = express();
 
 app.use('/api/auth', require('./routes/auth.routs'));
 
+console.log(`Starting my app :::`)
+
 if (process.env.NODE_ENV === 'production') {
     app.use('/', express.static(path.join(__dirname, 'client', 'build')));
 
@@ -25,9 +27,11 @@ async function start() {
         //     useCreateIndex: true,
         // });
 
-        app.listen(5000, () => console.log(`App has been started on port ${PORT}.`));
+        app.listen(5000, () => console.log(`App has been started on port ${PORT}:::`));
     } catch (e){
         console.log(`Eror:: ${e}`);
         process.exit(1);
     }
 }
+
+start();
