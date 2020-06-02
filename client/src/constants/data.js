@@ -32,10 +32,10 @@ export const products = [
     {
         productId: 1029,
         title: 'Петуния вегетативная среднецветковая',
-        imageSrc: '/img/DSC_0323_1.jpg',
+        imageSrc: '/img/dsc_0323_1.jpg',
         imagesGallery: [
-            '/img/DSC_0323_1.jpg',
-            '/img/DSC_0324_1.jpg',
+            '/img/dsc_0323_1.jpg',
+            '/img/dsc_0324_1.jpg',
         ],
         description: 'Кустовая петуния.',
         price: 2.5,
@@ -63,14 +63,14 @@ export const articles = [
     {
         articleId: 2001,
         title: 'Тестовая статья 1',
-        imageSrc: '/img/DSC_0324_1.jpg',
+        imageSrc: '/img/dsc_0324_1.jpg',
         description: 'Тест.',
         content: 'Тест текст',
     },
     {
         articleId: 2002,
         title: 'Тестовая статья 2',
-        imageSrc: '/img/DSC_0323_1.jpg',
+        imageSrc: '/img/dsc_0323_1.jpg',
         description: 'Тест.',
         content: 'Тест текст',
         },
