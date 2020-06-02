@@ -35,7 +35,7 @@ export const products = [
         imageSrc: '/img/img_1_01.jpg',
         imagesGallery: [
             '/img/img_1_01.jpg',
-            '/img/dsc_0324_1.jpg',
+            '/img/img_1_02.jpg',
         ],
         description: 'Кустовая петуния.',
         price: 2.5,
@@ -63,7 +63,7 @@ export const articles = [
     {
         articleId: 2001,
         title: 'Тестовая статья 1',
-        imageSrc: '/img/dsc_0324_1.jpg',
+        imageSrc: '/img/img_1_02.jpg',
         description: 'Тест.',
         content: 'Тест текст',
     },
